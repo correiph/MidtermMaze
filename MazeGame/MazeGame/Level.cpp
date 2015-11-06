@@ -2,10 +2,10 @@
 #include <iostream>
 Level::Level()
 {
-	player_texture.loadFromFile("Player_Sprite_Sheet_32_32.png");
+	player_texture.loadFromFile("Assets/Sprites/Player_Sprite_Sheet_32_32.png");
 	m_player = new Player(sf::Vector2f(0,0), sf::Vector2f(16, 16), 100.0f, player_texture);
 	//m_player->sprite.
-	m.loadFromFile("level1.tmx");
+	m.loadFromFile("Assets/Levels/level1.tmx");
 	//player_texture.loadFromFile("playersprite.png");
 	//m_player->sprite.setTexture();
 	//m_player->sprite.

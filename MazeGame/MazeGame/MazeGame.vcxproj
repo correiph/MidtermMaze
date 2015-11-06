@@ -104,15 +104,23 @@
     <ClInclude Include="tinyxml2.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Assets\Sprites\Axe.png" />
+    <Image Include="Assets\Sprites\bomb_party_v4.png" />
+    <Image Include="Assets\Sprites\Door.png" />
+    <Image Include="Assets\Sprites\player-sized-pumpkin.png" />
+    <Image Include="Assets\Sprites\Player_Sheet_32x32.jpg" />
+    <Image Include="Assets\Sprites\Player_Sprite_Sheet_32_32.png" />
+    <Image Include="Assets\Sprites\Potion.png" />
+    <Image Include="Assets\Sprites\Tile_Sheet_32x32.png" />
+    <Image Include="Assets\Tiles\Tile_Sheet_32x32.png" />
     <Image Include="bomb_party_v4.png" />
-    <Image Include="player-sized-pumpkin.png" />
-    <Image Include="Player_Sprite_Sheet_32_32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="level1.tmx" />
-    <None Include="level1map.tmx" />
-    <None Include="level2map.tmx" />
-    <None Include="level3map.tmx" />
+    <None Include="Assets\Levels\level1.tmx" />
+    <None Include="Assets\Levels\level1map.tmx" />
+    <None Include="Assets\Levels\level2map.tmx" />
+    <None Include="Assets\Levels\level3map.tmx" />
+    <None Include="Assets\Levels\Level_1.tmx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
