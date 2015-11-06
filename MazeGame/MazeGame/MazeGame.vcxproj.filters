@@ -119,5 +119,6 @@
     <None Include="Assets\Levels\level1map.tmx" />
     <None Include="Assets\Levels\level2map.tmx" />
     <None Include="Assets\Levels\level3map.tmx" />
+    <None Include="Assets\Levels\Level_2.tmx" />
   </ItemGroup>
 </Project>

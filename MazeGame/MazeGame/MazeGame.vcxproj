@@ -121,6 +121,7 @@
     <None Include="Assets\Levels\level2map.tmx" />
     <None Include="Assets\Levels\level3map.tmx" />
     <None Include="Assets\Levels\Level_1.tmx" />
+    <None Include="Assets\Levels\Level_2.tmx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
