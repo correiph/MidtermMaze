@@ -3,6 +3,7 @@
 
 Level::Level(std::string levelName) : window(sf::VideoMode(800, 600), "Midterm Maze Game")
 {
+	
 	sf::Clock gameClock;
 	gameTime = 0.0f;
 	currentTime = 0.0f;
@@ -64,7 +65,6 @@ void Level::Update(float delta){
 			}
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
 				m_player->SetDirection(sf::Vector2f(-1, 0));
-				std::cout << "A key is pressed" << std::endl;
 			}
 			else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
 				m_player->SetDirection(sf::Vector2f(1, 0));

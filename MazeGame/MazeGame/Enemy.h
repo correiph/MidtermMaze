@@ -14,6 +14,5 @@ private:
 	sf::Vector2f m_direction;
 	float m_speed;
 	virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
-	int rectangleSize;
 };
 
