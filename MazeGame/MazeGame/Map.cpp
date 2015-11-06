@@ -40,6 +40,5 @@ bool Map::loadFromFile(std::string file) {
 void Map::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 	for (std::size_t i = 0; i < m_layers.size(); i++) {
 		target.draw(m_layers[i], states);
-
 	}
 }
