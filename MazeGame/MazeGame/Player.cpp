@@ -25,6 +25,7 @@ void Player::Move(float delta) {
 	m_drawShape.setPosition(m_position);
 	if (frame_tick < 14)
 	{
+		//if (walking_dir != PLAYER_DIRECTION::IDLE)
 		frame_tick += 1;
 	}
 	else
@@ -36,6 +37,7 @@ void Player::Move(float delta) {
 			walking_frame = 0;
 		}
 		frame_tick = 0;
+		//if (walking_dir != PLAYER_DIRECTION::IDLE)
 		m_drawShape.setTextureRect(sf::IntRect(walking_frame * 32, 32 * walking_dir, 32, 32));
 	}
 }

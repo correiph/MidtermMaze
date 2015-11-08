@@ -14,7 +14,8 @@ public:
 		DOWNLEFT = 4,
 		UPLEFT = 5,
 		DOWNRIGHT = 6,
-		UPRIGHT = 7
+		UPRIGHT = 7,
+		IDLE = 8
 	};
 	void Move(float delta);
 	void SetDirection(sf::Vector2f newDir);
