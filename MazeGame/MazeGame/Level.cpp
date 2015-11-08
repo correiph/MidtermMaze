@@ -53,8 +53,21 @@ void Level::Update(float delta){
 		m_player->SetAnimDirection(Player::PLAYER_DIRECTION::IDLE);
 	}
 	m_player->Move(delta);
-	if (m_player->Right()){
-
+	if (m_player->Right()>320){
+		m_player->SetDirection(sf::Vector2f(-1,0));
+		m_player->Move(delta);
+	}
+	if (m_player->Left() < 0){
+		m_player->SetDirection(sf::Vector2f(1, 0));
+		m_player->Move(delta);
+	}
+	if (m_player->Top() < 0){
+		m_player->SetDirection(sf::Vector2f(0, 1));
+		m_player->Move(delta);
+	}
+	if (m_player->Bottom() > 320){
+		m_player->SetDirection(sf::Vector2f(0, -1));
+		m_player->Move(delta);
 	}
 }
 void Level::draw(sf::RenderTarget& target, sf::RenderStates states) const {
