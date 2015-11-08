@@ -30,15 +30,19 @@ void Level::Update(float delta){
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
 		m_player->SetDirection(sf::Vector2f(0, -1));
+		m_player->SetAnimDirection(Player::PLAYER_DIRECTION::UP);
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
 		m_player->SetDirection(sf::Vector2f(0, 1));
+		m_player->SetAnimDirection(Player::PLAYER_DIRECTION::DOWN);
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
 		m_player->SetDirection(sf::Vector2f(-1, 0));
+		m_player->SetAnimDirection(Player::PLAYER_DIRECTION::LEFT);
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
 		m_player->SetDirection(sf::Vector2f(1, 0));
+		m_player->SetAnimDirection(Player::PLAYER_DIRECTION::RIGHT);
 	}
 	else {
 		m_player->SetDirection(sf::Vector2f(0, 0));
