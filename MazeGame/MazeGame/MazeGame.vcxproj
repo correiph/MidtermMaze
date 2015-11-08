@@ -116,6 +116,7 @@
     <Image Include="bomb_party_v4.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\..\..\Desktop\Sheridan\Term 6\PROG37198 - Game Engineering\Midterm\Levels\Level_2.tmx" />
     <None Include="Assets\Levels\level1.tmx" />
     <None Include="Assets\Levels\level1map.tmx" />
     <None Include="Assets\Levels\level2map.tmx" />
