@@ -52,7 +52,7 @@ void Level::Update(float delta){
 		m_player->SetDirection(sf::Vector2f(0, 0));
 		m_player->SetAnimDirection(Player::PLAYER_DIRECTION::IDLE);
 	}
-	m_player->Move(delta);
+	m_player->Move(delta);	
 }
 void Level::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 	target.draw(m, states);
