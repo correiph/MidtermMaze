@@ -28,6 +28,7 @@ void Player::Move(float delta) {
 		//if (walking_dir != PLAYER_DIRECTION::IDLE)
 		frame_tick += 1;
 	}
+	
 	else
 	{
 		if (walking_frame < 3){

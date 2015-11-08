@@ -1,4 +1,6 @@
 #include "Level.h"
+#include "Layer.h"
+#include "Tile.h"
 #include <iostream>
 Level::Level()
 {
@@ -54,21 +56,55 @@ void Level::Update(float delta){
 	}
 	m_player->Move(delta);
 	if (m_player->Right()>320){
-		m_player->SetDirection(sf::Vector2f(-1,0));
+		sf::Vector2f dir = *m_player->GetDirection();
+		dir.x *= -1;
+		dir.y *= -1;
+		m_player->SetDirection(dir);
 		m_player->Move(delta);
 	}
 	if (m_player->Left() < 0){
-		m_player->SetDirection(sf::Vector2f(1, 0));
+		sf::Vector2f dir = *m_player->GetDirection();
+		dir.x *= -1;
+		dir.y *= -1;
+		m_player->SetDirection(dir);
 		m_player->Move(delta);
 	}
 	if (m_player->Top() < 0){
-		m_player->SetDirection(sf::Vector2f(0, 1));
+		sf::Vector2f dir = *m_player->GetDirection();
+		dir.x *= -1;
+		dir.y *= -1;
+		m_player->SetDirection(dir);
 		m_player->Move(delta);
 	}
 	if (m_player->Bottom() > 320){
-		m_player->SetDirection(sf::Vector2f(0, -1));
+		sf::Vector2f dir = *m_player->GetDirection();
+		dir.x *= -1;
+		dir.y *= -1;
+		m_player->SetDirection(dir);
 		m_player->Move(delta);
 	}
+	std::vector<Layer>* map_layers = m.GetLayers();
+	for each (Layer l in *map_layers)
+	{
+		if (l.name == "Walls"){
+			std::vector<std::vector<Tile>> wallTiles = *l.GetTiles();
+			for (int y = 0; y < wallTiles.size(); y++){
+				for (int x = 0; x < wallTiles[0].size(); x++) {
+					gid id = wallTiles[y][x].GID;
+					if (id == 86){
+						if (m_player->GetBoundingBox().intersects(sf::FloatRect(x*16, y*16, 16, 16))){
+							sf::Vector2f dir = *m_player->GetDirection();
+							dir.x *= -1;
+							dir.y *= -1;
+							m_player->SetDirection(dir);
+							m_player->Move(delta);
+						}
+					}
+				}
+			}
+		}
+	}
+	//m_player->GetBoundingBox().intersects()
 }
 void Level::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 	target.draw(m, states);

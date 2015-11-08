@@ -19,7 +19,9 @@ public:
 	};
 	void Move(float delta);
 	void SetDirection(sf::Vector2f newDir);
+	sf::Vector2f *GetDirection(){ return &m_direction; };
 	void SetAnimDirection(int state);
+
 private:
 	int walking_frame, walking_dir, frame_tick;
 	sf::Texture player_tex;
