@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Build started 2015-11-08 2:33:45 AM.
      1>Project "C:\Users\Philip\Documents\GitHub\MidtermMaze\MazeGame\MazeGame\MazeGame.vcxproj" on node 2 (Build target(s)).
      1>Link:
@@ -7,3 +8,14 @@
 Build succeeded.
 
 Time Elapsed 00:00:00.08
+=======
+﻿Build started 11/5/2015 7:21:16 PM.
+     1>Project "C:\Users\MidXORFeed\Source\Repos\MidtermMaze\MazeGame\MazeGame\MazeGame.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         MazeGame.vcxproj -> C:\Users\MidXORFeed\Source\Repos\MidtermMaze\MazeGame\Debug\MazeGame.exe
+     1>Done Building Project "C:\Users\MidXORFeed\Source\Repos\MidtermMaze\MazeGame\MazeGame\MazeGame.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.05
+>>>>>>> master
