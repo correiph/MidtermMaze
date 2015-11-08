@@ -29,7 +29,7 @@ bool Map::loadFromFile(std::string file) {
 
 	tinyxml2::XMLElement *layerEl = mapEl->FirstChildElement("layer");
 	while (layerEl != NULL) {
-		m_layers.push_back(Layer());
+		m_layers.push_back(Layer(layerEl->Attribute("name")));
 		m_layers.back().loadFromXML(layerEl);
 		m_layers.back().SetTileSet(m_tileset);
 		layerEl = layerEl->NextSiblingElement("layer");

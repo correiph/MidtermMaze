@@ -1,7 +1,7 @@
 #include "Layer.h"
 #include <SFML/Graphics/RenderTarget.hpp>
 
-Layer::Layer() : m_width(0), m_height(0)
+Layer::Layer(std::string name) : m_width(0), m_height(0), name(name)
 {
 }
 

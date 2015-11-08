@@ -14,7 +14,7 @@ public:
 	virtual ~Map();
 
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
-
+	std::vector<Layer>* GetLayers(){ return &m_layers; };
 private:
 	TileSet m_tileset;
 	std::vector<Layer> m_layers;
